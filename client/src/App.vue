@@ -1,9 +1,13 @@
 <template>
     <div id="app">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+        <router-view></router-view>
         <button v-on:click="toggle='thing-viewer'; getThings()">View all things</button>
         <button v-on:click="toggle='thing-creator'">Create a thing</button>
         <ThingViewer v-show="toggle==='thing-viewer'" :things="things"/>
         <ThingCreator v-show="toggle==='thing-creator'" />
+
     </div>
 </template>
 
